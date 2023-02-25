@@ -10,6 +10,9 @@ for i in input:
     else:
         counts[i] = 1
 print(len(counts))
+
+print(len(set(input)))
+
 # for k,v in counts.items():
 #     (print(f"{k} - {v}"))
 # for k in counts:

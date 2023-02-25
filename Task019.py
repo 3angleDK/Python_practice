@@ -15,3 +15,5 @@ for i in range(0, k):
     res.append(list[i])
 print(f"Исходный список: {list}")
 print(f"Результат: {res}")
+
+print(f"Результат: {[list[(i + k) % (len(list))] for i in range(len(list))]}")
