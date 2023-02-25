@@ -13,7 +13,7 @@ for item in lst:
     for k, v in item.items():
         s.add(v)
 print(s)
-
+ 
 # res = {}
 # for item in lst:
 #     for k, v in item.items():
