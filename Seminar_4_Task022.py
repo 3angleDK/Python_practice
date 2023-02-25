@@ -13,4 +13,4 @@ lst1 = [2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2]
 lst2 = [3, 6, 9, 12, 15, 18]
 
 res = sorted(list(set(lst1).intersection(set(lst2))))
-print(res)
+print(res) 
