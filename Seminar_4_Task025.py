@@ -11,10 +11,15 @@ dct = dict()
 lst = s.split()
 res = ""
 for c in lst:
-    if dct.__contains__(c):
-        res += c + "_" + str(dct[c]) + " "
-        dct[c] += 1
+    if c in dct:
+        res += c + "_" + str(dct[c]) + " "    
     else:
         res += c + " "
-        dct[c] = 1
+    dct[c] = dct.get(c, 0) + 1
+    # if dct.__contains__(c):
+    #     res += c + "_" + str(dct[c]) + " "
+    #     dct[c] += 1
+    # else:
+    #     res += c + " "
+    #     dct[c] = 1
 print(res)
