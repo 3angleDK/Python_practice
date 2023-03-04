@@ -17,7 +17,7 @@
 # Вывод:
 # 220 284
 
-from math import sqrt
+from math import isqrt
 
 # def GetSumDividers(n):
 #     sum = 1
@@ -28,7 +28,7 @@ from math import sqrt
 
 def GetSumDividers(n):
     sum = 1
-    m = int(sqrt(n))
+    m = isqrt(n)
     i = 2
     while i <= m:
         if n % i == 0:
