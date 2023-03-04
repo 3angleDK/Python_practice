@@ -17,14 +17,27 @@
 # Вывод:
 # 220 284
 
+from math import sqrt
+
+# def GetSumDividers(n):
+#     sum = 1
+#     for i in range(2, n // 2 + 1):
+#         if n % i == 0:
+#             sum += i
+#     return sum
+
 def GetSumDividers(n):
     sum = 1
-    for i in range(2, n // 2 + 1):
+    m = int(sqrt(n))
+    i = 2
+    while i <= m:
         if n % i == 0:
             sum += i
+            sum += n // i
+        i += 1
     return sum
 
-n = 3000
+n = 30000
 for d1 in range(1, n):
     d2 = GetSumDividers(d1)
     if d2 < n and d1 < d2 and d1 == GetSumDividers(d2):
