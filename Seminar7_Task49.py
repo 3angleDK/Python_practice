@@ -18,14 +18,14 @@
 # имеющий такую площадь. Гарантируется, что самая далекая
 # планета ровно одна
 
-from math import pi
-
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 
-res = list(filter(lambda x: x[0] != x[1], orbits))  # исключаем круговые орбиты
-max_area = max(list(map(lambda x: x[0] * x[1] * pi, res)))  # находим максимальную площадь орбиты
+# res = list(filter(lambda x: x[0] != x[1], orbits))  # исключаем круговые орбиты
+# max_area = max(map(lambda x: x[0] * x[1], res))  # находим максимальную площадь орбиты
+# res = list(filter(lambda x: x[0] * x[1] >= max_area, res))
+# print(res)
 
-res = list(filter(lambda x: x[0] * x[1] * pi >= max_area, res))
+res = max(orbits, key = lambda x: (x[0] != x[1]) * x[0] * x[1])
 print(res)
 
 
