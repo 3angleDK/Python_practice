@@ -13,8 +13,7 @@ str = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
 # str = 'пара-ра-рам рам-пам-папам па-ра-па-дам-дам'
 
 # vwls = ''.join([c for c in str if c in vowels])
-vwls = ''.join(filter(lambda c: c in vowels, str))
-vwls = vwls.split(' ')
+vwls = ''.join(filter(lambda c: c in vowels, str)).split(' ')
 if len(set(map(lambda c: len(c), vwls))) == 1:
     print("Парам пам-пам")
 else:
